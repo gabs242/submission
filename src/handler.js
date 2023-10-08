@@ -15,7 +15,7 @@ const addBookHandler = (request, h) => {
     if (name === undefined){
         const response = h.response({
             status:'fail',
-            message: 'Gagal Menambahkan Buku. Mohon Isi Nama Buku'
+            message: 'Gagal menambahkan buku. Mohon isi nama buku'
         });
         response.code(400);
         return response;
@@ -23,7 +23,7 @@ const addBookHandler = (request, h) => {
     else if(readPage > pageCount){
         const response = h.response ({
             status: 'fail',
-            message: 'Gagal Menambahkan Buku. readPage tidak boleh lebih besar dari pageCount'
+            message: 'Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount'
         });
         response.code(400);
         return response;
@@ -56,7 +56,7 @@ const addBookHandler = (request, h) => {
         if (isSuccess) {
             const response = h.response({
                 status: 'success',
-                message: 'Buku Berhasil Ditambahkan',
+                message: 'Buku berhasil ditambahkan',
                 data: {
                     bookId: id,
                 },
@@ -69,7 +69,7 @@ const addBookHandler = (request, h) => {
 
     const response = h.response({
         status: 'fail',
-        message: 'Buku Gagal Ditambahkan',
+        message: 'Buku gagal ditambahkan',
     });
     response.code(500);
     return response;
@@ -98,7 +98,7 @@ const getBookByIdHandler = (request, h) => {
 
     const response = h.response({
         status: 'fail',
-        message: 'Buku Tidak Ditemukan',
+        message: 'Buku tidak ditemukan',
     });
     response.code(404);
     return response;
@@ -112,7 +112,7 @@ const editBookByIdHandler = (request, h) => {
     if (name === undefined) {
         const response = h.response ({
             status: 'fail',
-            message: 'Gagal Memperbarui Buku. Mohon isi Nama Buku'
+            message: 'Gagal memperbarui buku. Mohon isi nama buku'
         });
         response.code(400);
         return response;
@@ -120,7 +120,7 @@ const editBookByIdHandler = (request, h) => {
     else if (readPage > pageCount) {
         const response = h.response ({
             status: 'fail',
-            message: 'Gagal Memperbarui Buku. readPage tidak boleh lebih besar dari pageCount'
+            message: 'Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount'
         });
         response.code(400);
         return response;
